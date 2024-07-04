@@ -35,6 +35,10 @@ private extension AppCoordinator {
         secondCoordinator.finishDelegate = self
         secondCoordinator.start()
         
+        let textAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 18)]
+        firstNavigationController.tabBarItem.setTitleTextAttributes(textAttributes, for: .normal)
+        secondNavigationController.tabBarItem.setTitleTextAttributes(textAttributes, for: .normal)
+        
         addChildCoordinator(firstCoordinator)
         addChildCoordinator(secondCoordinator)
         

@@ -10,7 +10,6 @@ import UIKit
 class FirstCoordinator: Coordinator {
     override func start() {
         let vc = FirstController()
-        vc.view.backgroundColor = .cyan
         navigationController?.pushViewController(vc, animated: true)
     }
     
