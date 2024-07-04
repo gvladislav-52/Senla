@@ -1,0 +1,100 @@
+//
+//  FirstModel.swift
+//  SENLA_Homework
+//
+//  Created by macbookbro on 04.07.2024.
+//
+
+import UIKit
+
+enum FirstModelType {
+    case rock
+    case paper
+    case scissir
+}
+
+class FirstModel {
+    
+    static let shared = FirstModel()
+    public var statusOponent: FirstModelType!
+    public var statusYour: FirstModelType!
+    public var statusOponentString: String! {
+        switch statusOponent {
+        case .rock:
+            return "Был Камень"
+        case .scissir:
+            return "Были Ножницы"
+        case .paper:
+            return "Была Бумага"
+        default:
+            return nil
+        }
+    }
+    init() {
+        statusOponent = nil
+        statusYour = nil
+    }
+    func start(number: Int) {
+        var array:[Int] = [1,2,3]
+        array = array.filter {$0 != number}
+        var index = Int.random(in: 0..<array.count)
+        switch array[index] {
+        case 1:
+            statusOponent = .paper
+        case 2:
+            statusOponent = .rock
+        case 3:
+            statusOponent = .scissir
+        default:
+            break
+        }
+    }
+    
+    func winnerMethod() -> String {
+        if(statusOponent == .rock && statusYour == .paper) {
+            return "Your Winner!"
+        } else if (statusOponent == .rock && statusYour == .scissir) {
+            return "Your Lose!"
+        } else if (statusOponent == .rock && statusYour == .rock) {
+            return "Draw!"
+        }
+        
+        switch statusOponent {
+        case .rock:
+            switch statusYour {
+            case .paper:
+                return "Your Winner!"
+            case .scissir:
+                return "Your Lose!"
+            case .rock:
+                return "Draw"
+            default:
+                return ""
+            }
+        case .scissir:
+            switch statusYour {
+            case .rock:
+                return "Your Winner!"
+            case .paper:
+                return "Your Lose!"
+            case .scissir:
+                return "Draw"
+            default:
+                return ""
+            }
+        case .paper:
+            switch statusYour {
+            case .scissir:
+                return "Your Winner!"
+            case .rock:
+                return "Your Lose!"
+            case .paper:
+                return "Draw"
+            default:
+                return ""
+            }
+        default:
+            return ""
+        }
+    }
+}
