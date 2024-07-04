@@ -10,7 +10,10 @@ import UIKit
 class FirstController: UIViewController {
 
     // MARK: - UI Elements
-    private var label: UILabel
+    private var isRevansh: Bool = true
+    private var labelWinner: UILabel!
+    private var labelOpenent: UILabel!
+    private var label: UILabel!
     private var imageViewRock: UIImageView
     private var imageViewPaper: UIImageView
     private var imageViewScissors: UIImageView
@@ -26,6 +29,8 @@ class FirstController: UIViewController {
     // MARK: - Initializer
         init() {
             // Initialize UI elements
+            labelWinner = UILabel()
+            labelOpenent = UILabel()
             label = UILabel()
             imageViewRock = UIImageView()
             imageViewPaper = UIImageView()
@@ -45,6 +50,8 @@ class FirstController: UIViewController {
         setupImageViewPaper()
         setupImageViewScissors()
         setupButton()
+        setupTitleWinner()
+        setupTitleOponent()
     }
 
     private func setupTitle() {
@@ -83,6 +90,8 @@ class FirstController: UIViewController {
 
     @objc private func handleImageTapRock() {
         label.text = "Камень"
+        FirstModel.shared.start(number: 2)
+        FirstModel.shared.statusYour = .rock
     }
 
     private func setupImageViewPaper() {
@@ -108,6 +117,8 @@ class FirstController: UIViewController {
 
     @objc private func handleImageTapPaper() {
         label.text = "Бумага"
+        FirstModel.shared.start(number: 1)
+        FirstModel.shared.statusYour = .paper
     }
 
     private func setupImageViewScissors() {
@@ -133,6 +144,8 @@ class FirstController: UIViewController {
 
     @objc private func handleImageTapScissors() {
         label.text = "Ножницы"
+        FirstModel.shared.start(number: 3)
+        FirstModel.shared.statusYour = .scissir
     }
     
     private func setupButton() {
@@ -153,9 +166,55 @@ class FirstController: UIViewController {
             button.heightAnchor.constraint(equalToConstant: 40)
         ])
     }
+    
+    private func setupTitleWinner() {
+        view.addSubview(labelWinner)
+        labelWinner.translatesAutoresizingMaskIntoConstraints = false
+        labelWinner.text = nil
+        labelWinner.textColor = .red
+        labelWinner.font = .systemFont(ofSize: 36, weight: .bold)
+        labelWinner.textAlignment = .center
+        
+        NSLayoutConstraint.activate([
+            labelWinner.bottomAnchor.constraint(equalTo: button.topAnchor, constant: -30),
+            labelWinner.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+    }
+    
+    private func setupTitleOponent() {
+        view.addSubview(labelOpenent)
+        labelOpenent.translatesAutoresizingMaskIntoConstraints = false
+        labelOpenent.text = nil
+        labelOpenent.textColor = .yellow
+        labelOpenent.font = .systemFont(ofSize: 36, weight: .bold)
+        labelOpenent.textAlignment = .center
+        
+        NSLayoutConstraint.activate([
+            labelOpenent.topAnchor.constraint(equalTo: imageViewRock.bottomAnchor, constant: 150),
+            labelOpenent.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+    }
 
     // MARK: - Button Action
     @objc private func buttonTapped() {
-        print("Button tapped!")
+        if isRevansh {
+            guard let _ = FirstModel.shared.statusYour else {return}
+            labelOpenent.text = FirstModel.shared.statusOponentString
+            labelWinner.text = FirstModel.shared.winnerMethod()
+            button.setTitle("Давай реванш?", for: .normal)
+            button.backgroundColor = .green
+            isRevansh = false
+        } else
+        {
+            print("ads")
+            FirstModel.shared.statusOponent = nil
+            FirstModel.shared.statusYour = nil
+            label.text = nil
+            labelOpenent.text = nil
+            labelWinner.text = nil
+            button.setTitle("Давай сыграем!", for: .normal)
+            button.backgroundColor = .systemBlue
+            isRevansh = true
+        }
     }
 }
