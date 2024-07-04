@@ -24,6 +24,37 @@ class FirstController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .gray
         setupLayout()
+        setupCustomNavigationBar()
+    }
+    
+    private func setupCustomNavigationBar() {
+        let customNavigationBar = CustomNavigationBar()
+        
+        // Добавляем customNavigationBar как сабвью
+        view.addSubview(customNavigationBar)
+        customNavigationBar.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Устанавливаем ограничения для customNavigationBar
+        NSLayoutConstraint.activate([
+            customNavigationBar.topAnchor.constraint(equalTo: view.topAnchor),
+            customNavigationBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            customNavigationBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            customNavigationBar.heightAnchor.constraint(equalToConstant: 80)
+        ])
+        
+        // Устанавливаем действия для кнопок
+        customNavigationBar.setLeftButtonAction(target: self, action: #selector(leftButtonTapped))
+        customNavigationBar.setRightButtonAction(target: self, action: #selector(rightButtonTapped))
+    }
+    
+    @objc private func leftButtonTapped() {
+        // Действие для левой кнопки
+        print("Left button tapped")
+    }
+    
+    @objc private func rightButtonTapped() {
+        // Действие для правой кнопки
+        print("Right button tapped")
     }
     
     // MARK: - Initializer
@@ -206,7 +237,6 @@ class FirstController: UIViewController {
             isRevansh = false
         } else
         {
-            print("ads")
             FirstModel.shared.statusOponent = nil
             FirstModel.shared.statusYour = nil
             label.text = nil
