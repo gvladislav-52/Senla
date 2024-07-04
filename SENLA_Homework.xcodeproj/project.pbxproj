@@ -19,6 +19,7 @@
 		22F8421A2C3713EF00925538 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F842192C3713EF00925538 /* FirstViewController.swift */; };
 		22F8421C2C37143000925538 /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8421B2C37143000925538 /* SecondController.swift */; };
 		22F8421E2C37347E00925538 /* FirstModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8421D2C37347E00925538 /* FirstModel.swift */; };
+		22F842222C3753A000925538 /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F842212C3753A000925538 /* NavigationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		22F842192C3713EF00925538 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		22F8421B2C37143000925538 /* SecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
 		22F8421D2C37347E00925538 /* FirstModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstModel.swift; sourceTree = "<group>"; };
+		22F842212C3753A000925538 /* NavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				22F8420D2C37059C00925538 /* FirstCoordinator.swift */,
 				22F842192C3713EF00925538 /* FirstViewController.swift */,
 				22F8421D2C37347E00925538 /* FirstModel.swift */,
+				22F842212C3753A000925538 /* NavigationView.swift */,
 			);
 			path = FirstScene;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			files = (
 				22F8421A2C3713EF00925538 /* FirstViewController.swift in Sources */,
 				22F8420A2C37016600925538 /* Coordinator.swift in Sources */,
+				22F842222C3753A000925538 /* NavigationView.swift in Sources */,
 				22F842122C3708E100925538 /* TabBarController.swift in Sources */,
 				22F8420E2C37059C00925538 /* FirstCoordinator.swift in Sources */,
 				22F8420C2C37046500925538 /* AppCoordinator.swift in Sources */,
