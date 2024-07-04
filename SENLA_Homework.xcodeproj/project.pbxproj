@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22F4F8F42C35B40100238797 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4F8F32C35B40100238797 /* AppDelegate.swift */; };
+		22F4F8F62C35B40100238797 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4F8F52C35B40100238797 /* SceneDelegate.swift */; };
+		22F4F8FD2C35B40600238797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F4F8FC2C35B40600238797 /* Assets.xcassets */; };
+		22F4F9002C35B40600238797 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F4F8FE2C35B40600238797 /* LaunchScreen.storyboard */; };
+		22F8420A2C37016600925538 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F842092C37016600925538 /* Coordinator.swift */; };
+		22F8420C2C37046500925538 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8420B2C37046500925538 /* AppCoordinator.swift */; };
+		22F8420E2C37059C00925538 /* FirstCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8420D2C37059C00925538 /* FirstCoordinator.swift */; };
+		22F842102C3707F300925538 /* SecondCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8420F2C3707F300925538 /* SecondCoordinator.swift */; };
+		22F842122C3708E100925538 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F842112C3708E100925538 /* TabBarController.swift */; };
+		22F8421A2C3713EF00925538 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F842192C3713EF00925538 /* FirstViewController.swift */; };
+		22F8421C2C37143000925538 /* SecondController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8421B2C37143000925538 /* SecondController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		22F4F8F02C35B40100238797 /* SENLA_Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SENLA_Homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22F4F8F32C35B40100238797 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		22F4F8F52C35B40100238797 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		22F4F8FC2C35B40600238797 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22F4F8FF2C35B40600238797 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22F4F9012C35B40600238797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22F842092C37016600925538 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		22F8420B2C37046500925538 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		22F8420D2C37059C00925538 /* FirstCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstCoordinator.swift; sourceTree = "<group>"; };
+		22F8420F2C3707F300925538 /* SecondCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondCoordinator.swift; sourceTree = "<group>"; };
+		22F842112C3708E100925538 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		22F842192C3713EF00925538 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		22F8421B2C37143000925538 /* SecondController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22F4F8ED2C35B40100238797 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22F4F8E72C35B40100238797 = {
+			isa = PBXGroup;
+			children = (
+				22F4F8F22C35B40100238797 /* SENLA_Homework */,
+				22F4F8F12C35B40100238797 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		22F4F8F12C35B40100238797 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22F4F8F02C35B40100238797 /* SENLA_Homework.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22F4F8F22C35B40100238797 /* SENLA_Homework */ = {
+			isa = PBXGroup;
+			children = (
+				22F842152C37126D00925538 /* App */,
+				22F842052C37013000925538 /* NavigationLayer */,
+				22F842162C37128600925538 /* Support */,
+				22F4F9012C35B40600238797 /* Info.plist */,
+			);
+			path = SENLA_Homework;
+			sourceTree = "<group>";
+		};
+		22F842052C37013000925538 /* NavigationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				22F842172C3712C500925538 /* FirstScene */,
+				22F842182C3712F300925538 /* SecondScene */,
+				22F842072C37014B00925538 /* Coordinators */,
+				22F842062C37014300925538 /* Controllers */,
+			);
+			path = NavigationLayer;
+			sourceTree = "<group>";
+		};
+		22F842062C37014300925538 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				22F842112C3708E100925538 /* TabBarController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		22F842072C37014B00925538 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				22F842092C37016600925538 /* Coordinator.swift */,
+				22F8420B2C37046500925538 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		22F842152C37126D00925538 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				22F4F8F32C35B40100238797 /* AppDelegate.swift */,
+				22F4F8F52C35B40100238797 /* SceneDelegate.swift */,
+				22F4F8FE2C35B40600238797 /* LaunchScreen.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		22F842162C37128600925538 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				22F4F8FC2C35B40600238797 /* Assets.xcassets */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		22F842172C3712C500925538 /* FirstScene */ = {
+			isa = PBXGroup;
+			children = (
+				22F8420D2C37059C00925538 /* FirstCoordinator.swift */,
+				22F842192C3713EF00925538 /* FirstViewController.swift */,
+			);
+			path = FirstScene;
+			sourceTree = "<group>";
+		};
+		22F842182C3712F300925538 /* SecondScene */ = {
+			isa = PBXGroup;
+			children = (
+				22F8420F2C3707F300925538 /* SecondCoordinator.swift */,
+				22F8421B2C37143000925538 /* SecondController.swift */,
+			);
+			path = SecondScene;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22F4F8EF2C35B40100238797 /* SENLA_Homework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22F4F9042C35B40600238797 /* Build configuration list for PBXNativeTarget "SENLA_Homework" */;
+			buildPhases = (
+				22F4F8EC2C35B40100238797 /* Sources */,
+				22F4F8ED2C35B40100238797 /* Frameworks */,
+				22F4F8EE2C35B40100238797 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SENLA_Homework;
+			productName = SENLA_Homework;
+			productReference = 22F4F8F02C35B40100238797 /* SENLA_Homework.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22F4F8E82C35B40100238797 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					22F4F8EF2C35B40100238797 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 22F4F8EB2C35B40100238797 /* Build configuration list for PBXProject "SENLA_Homework" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22F4F8E72C35B40100238797;
+			productRefGroup = 22F4F8F12C35B40100238797 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22F4F8EF2C35B40100238797 /* SENLA_Homework */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22F4F8EE2C35B40100238797 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22F4F9002C35B40600238797 /* LaunchScreen.storyboard in Resources */,
+				22F4F8FD2C35B40600238797 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22F4F8EC2C35B40100238797 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22F8421A2C3713EF00925538 /* FirstViewController.swift in Sources */,
+				22F8420A2C37016600925538 /* Coordinator.swift in Sources */,
+				22F842122C3708E100925538 /* TabBarController.swift in Sources */,
+				22F8420E2C37059C00925538 /* FirstCoordinator.swift in Sources */,
+				22F8420C2C37046500925538 /* AppCoordinator.swift in Sources */,
+				22F842102C3707F300925538 /* SecondCoordinator.swift in Sources */,
+				22F4F8F42C35B40100238797 /* AppDelegate.swift in Sources */,
+				22F4F8F62C35B40100238797 /* SceneDelegate.swift in Sources */,
+				22F8421C2C37143000925538 /* SecondController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		22F4F8FE2C35B40600238797 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22F4F8FF2C35B40600238797 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22F4F9022C35B40600238797 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		22F4F9032C35B40600238797 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22F4F9052C35B40600238797 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SENLA_Homework/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gvladislav-52.SENLA-Homework";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		22F4F9062C35B40600238797 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SENLA_Homework/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "gvladislav-52.SENLA-Homework";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22F4F8EB2C35B40100238797 /* Build configuration list for PBXProject "SENLA_Homework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22F4F9022C35B40600238797 /* Debug */,
+				22F4F9032C35B40600238797 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22F4F9042C35B40600238797 /* Build configuration list for PBXNativeTarget "SENLA_Homework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22F4F9052C35B40600238797 /* Debug */,
+				22F4F9062C35B40600238797 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22F4F8E82C35B40100238797 /* Project object */;
+}
