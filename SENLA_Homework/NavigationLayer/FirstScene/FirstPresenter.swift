@@ -9,30 +9,30 @@ import Foundation
 
 class FirstPresenter {
     private weak var view: FirstViewController?
-    private(set) var model: FirstModel?
+    //private(set) var model: FirstModel?
     
     init(view: FirstViewController, model: FirstModel) {
         self.view = view
-        self.model = model
+        //self.model = model
     }
     
     func didHandleImageTapRock() {
-        model?.start(number: 2)
-        model?.statusYour = .rock
+        FirstModel.shared.start(number: 2)
+        FirstModel.shared.statusYour = .rock
     }
     
     func didHandleImageTapPaper() {
-        model?.start(number: 1)
-        model?.statusYour = .paper
+        FirstModel.shared.start(number: 1)
+        FirstModel.shared.statusYour = .paper
     }
     
     func didHandleImageTapScissors() {
-        model?.start(number: 3)
-        model?.statusYour = .scissir
+        FirstModel.shared.start(number: 3)
+        FirstModel.shared.statusYour = .scissir
     }
     
     func clearAllStatus() {
-        model?.statusOponent = nil
-        model?.statusYour = nil
+        FirstModel.shared.statusOponent = nil
+        FirstModel.shared.statusYour = nil
     }
 }

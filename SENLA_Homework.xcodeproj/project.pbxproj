@@ -10,6 +10,11 @@
 		2230C9DC2C38107500A075B4 /* SecondModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230C9DB2C38107500A075B4 /* SecondModel.swift */; };
 		2230C9DE2C38109E00A075B4 /* SecondPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230C9DD2C38109E00A075B4 /* SecondPresenter.swift */; };
 		2230C9E22C38186800A075B4 /* FirstPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230C9E12C38186800A075B4 /* FirstPresenter.swift */; };
+		2230C9E42C38534200A075B4 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230C9E32C38534200A075B4 /* Test.swift */; };
+		2230C9E72C38665D00A075B4 /* HistoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230C9E62C38665D00A075B4 /* HistoryCoordinator.swift */; };
+		2230C9E92C38668E00A075B4 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230C9E82C38668E00A075B4 /* HistoryViewController.swift */; };
+		2230C9EB2C3866A500A075B4 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230C9EA2C3866A500A075B4 /* HistoryModel.swift */; };
+		2230C9ED2C3866B200A075B4 /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230C9EC2C3866B200A075B4 /* HistoryPresenter.swift */; };
 		22F4F8F42C35B40100238797 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4F8F32C35B40100238797 /* AppDelegate.swift */; };
 		22F4F8F62C35B40100238797 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4F8F52C35B40100238797 /* SceneDelegate.swift */; };
 		22F4F8FD2C35B40600238797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F4F8FC2C35B40600238797 /* Assets.xcassets */; };
@@ -29,6 +34,11 @@
 		2230C9DB2C38107500A075B4 /* SecondModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondModel.swift; sourceTree = "<group>"; };
 		2230C9DD2C38109E00A075B4 /* SecondPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPresenter.swift; sourceTree = "<group>"; };
 		2230C9E12C38186800A075B4 /* FirstPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPresenter.swift; sourceTree = "<group>"; };
+		2230C9E32C38534200A075B4 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
+		2230C9E62C38665D00A075B4 /* HistoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinator.swift; sourceTree = "<group>"; };
+		2230C9E82C38668E00A075B4 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		2230C9EA2C3866A500A075B4 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
+		2230C9EC2C3866B200A075B4 /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
 		22F4F8F02C35B40100238797 /* SENLA_Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SENLA_Homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F4F8F32C35B40100238797 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22F4F8F52C35B40100238797 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,9 +67,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2230C9E52C38664D00A075B4 /* HistoryScene */ = {
+			isa = PBXGroup;
+			children = (
+				2230C9E62C38665D00A075B4 /* HistoryCoordinator.swift */,
+				2230C9E82C38668E00A075B4 /* HistoryViewController.swift */,
+				2230C9EA2C3866A500A075B4 /* HistoryModel.swift */,
+				2230C9EC2C3866B200A075B4 /* HistoryPresenter.swift */,
+			);
+			path = HistoryScene;
+			sourceTree = "<group>";
+		};
 		22F4F8E72C35B40100238797 = {
 			isa = PBXGroup;
 			children = (
+				2230C9E32C38534200A075B4 /* Test.swift */,
 				22F4F8F22C35B40100238797 /* SENLA_Homework */,
 				22F4F8F12C35B40100238797 /* Products */,
 			);
@@ -87,6 +109,7 @@
 		22F842052C37013000925538 /* NavigationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				2230C9E52C38664D00A075B4 /* HistoryScene */,
 				22F842172C3712C500925538 /* FirstScene */,
 				22F842182C3712F300925538 /* SecondScene */,
 				22F842072C37014B00925538 /* Coordinators */,
@@ -225,17 +248,22 @@
 			files = (
 				22F8421A2C3713EF00925538 /* FirstViewController.swift in Sources */,
 				2230C9DC2C38107500A075B4 /* SecondModel.swift in Sources */,
+				2230C9EB2C3866A500A075B4 /* HistoryModel.swift in Sources */,
+				2230C9E42C38534200A075B4 /* Test.swift in Sources */,
 				22F8420A2C37016600925538 /* Coordinator.swift in Sources */,
 				22F842222C3753A000925538 /* NavigationView.swift in Sources */,
+				2230C9E72C38665D00A075B4 /* HistoryCoordinator.swift in Sources */,
 				22F842122C3708E100925538 /* TabBarController.swift in Sources */,
 				22F8420E2C37059C00925538 /* FirstCoordinator.swift in Sources */,
 				22F8420C2C37046500925538 /* AppCoordinator.swift in Sources */,
 				2230C9DE2C38109E00A075B4 /* SecondPresenter.swift in Sources */,
 				22F842102C3707F300925538 /* SecondCoordinator.swift in Sources */,
 				2230C9E22C38186800A075B4 /* FirstPresenter.swift in Sources */,
+				2230C9ED2C3866B200A075B4 /* HistoryPresenter.swift in Sources */,
 				22F8421E2C37347E00925538 /* FirstModel.swift in Sources */,
 				22F4F8F42C35B40100238797 /* AppDelegate.swift in Sources */,
 				22F4F8F62C35B40100238797 /* SceneDelegate.swift in Sources */,
+				2230C9E92C38668E00A075B4 /* HistoryViewController.swift in Sources */,
 				22F8421C2C37143000925538 /* SecondViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
