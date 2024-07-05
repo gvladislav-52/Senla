@@ -37,7 +37,7 @@ class FirstModel {
     func start(number: Int) {
         var array:[Int] = [1,2,3]
         array = array.filter {$0 != number}
-        var index = Int.random(in: 0..<array.count)
+        let index = Int.random(in: 0..<array.count)
         switch array[index] {
         case 1:
             statusOponent = .paper
