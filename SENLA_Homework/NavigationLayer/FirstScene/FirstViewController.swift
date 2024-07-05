@@ -19,11 +19,13 @@ class FirstViewController: UIViewController {
     private var imageViewPaper: UIImageView
     private var imageViewScissors: UIImageView
     private var button = UIButton(type: .infoDark)
+    private var presenter: FirstPresenter!
 
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .gray
+        presenter = FirstPresenter(view: self, model: FirstModel())
         setupLayout()
     }
     
@@ -117,9 +119,8 @@ class FirstViewController: UIViewController {
     }
 
     @objc private func handleImageTapRock() {
+        presenter.didHandleImageTapRock()
         label.text = "Камень"
-        FirstModel.shared.start(number: 2)
-        FirstModel.shared.statusYour = .rock
     }
 
     private func setupImageViewPaper() {
@@ -144,9 +145,8 @@ class FirstViewController: UIViewController {
     }
 
     @objc private func handleImageTapPaper() {
+        presenter.didHandleImageTapPaper()
         label.text = "Бумага"
-        FirstModel.shared.start(number: 1)
-        FirstModel.shared.statusYour = .paper
     }
 
     private func setupImageViewScissors() {
@@ -171,9 +171,8 @@ class FirstViewController: UIViewController {
     }
 
     @objc private func handleImageTapScissors() {
+        presenter.didHandleImageTapScissors()
         label.text = "Ножницы"
-        FirstModel.shared.start(number: 3)
-        FirstModel.shared.statusYour = .scissir
     }
     
     private func setupButton() {
@@ -226,22 +225,22 @@ class FirstViewController: UIViewController {
     // MARK: - Button Action
     @objc private func buttonTapped() {
         if isRevansh {
-            guard let _ = FirstModel.shared.statusYour else {return}
-            labelOpenent.text = FirstModel.shared.statusOponentString
-            labelWinner.text = FirstModel.shared.winnerMethod()
+            guard let _ = presenter.model?.statusYour else {return}
+            labelOpenent.text = presenter.model?.statusOponentString
+            labelWinner.text = presenter.model?.winnerMethod()
             button.setTitle("Давай реванш?", for: .normal)
             button.backgroundColor = .green
             isRevansh = false
         } else
         {
-            FirstModel.shared.statusOponent = nil
-            FirstModel.shared.statusYour = nil
+            presenter.clearAllStatus()
             label.text = nil
             labelOpenent.text = nil
             labelWinner.text = nil
             button.setTitle("Давай сыграем!", for: .normal)
             button.backgroundColor = .systemBlue
             isRevansh = true
+            label.text = "Камень, Ножницы, Бумага"
         }
     }
 }

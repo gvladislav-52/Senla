@@ -52,17 +52,7 @@ private extension AppCoordinator {
 extension AppCoordinator: CoordinatorFinishDelegate {
     func coordinatorDidFinish(childCoordinator: CoordinatorProtocol) {
         removeChildCoordinator(childCoordinator)
-        
-        switch childCoordinator.type {
-        case .first:
-            return
-        case .second:
-            return
-        default:
-            navigationController?.popViewController(animated: false)
-        }
     }
-    
 }
 
 

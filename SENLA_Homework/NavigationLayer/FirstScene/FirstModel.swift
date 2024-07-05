@@ -13,12 +13,12 @@ enum FirstModelType {
     case scissir
 }
 
-class FirstModel {
+struct FirstModel {
     
-    static let shared = FirstModel()
-    public var statusOponent: FirstModelType!
-    public var statusYour: FirstModelType!
-    public var statusOponentString: String! {
+     var statusOponent: FirstModelType!
+     var statusYour: FirstModelType!
+    
+     var statusOponentString: String! {
         switch statusOponent {
         case .rock:
             return "Был Камень"
@@ -34,7 +34,8 @@ class FirstModel {
         statusOponent = nil
         statusYour = nil
     }
-    func start(number: Int) {
+    
+    mutating func start(number: Int) {
         var array:[Int] = [1,2,3]
         array = array.filter {$0 != number}
         let index = Int.random(in: 0..<array.count)
