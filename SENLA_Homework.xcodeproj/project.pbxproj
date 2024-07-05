@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2230C9DC2C38107500A075B4 /* SecondModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230C9DB2C38107500A075B4 /* SecondModel.swift */; };
 		2230C9DE2C38109E00A075B4 /* SecondPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230C9DD2C38109E00A075B4 /* SecondPresenter.swift */; };
+		2230C9E22C38186800A075B4 /* FirstPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2230C9E12C38186800A075B4 /* FirstPresenter.swift */; };
 		22F4F8F42C35B40100238797 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4F8F32C35B40100238797 /* AppDelegate.swift */; };
 		22F4F8F62C35B40100238797 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F4F8F52C35B40100238797 /* SceneDelegate.swift */; };
 		22F4F8FD2C35B40600238797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F4F8FC2C35B40600238797 /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		2230C9DB2C38107500A075B4 /* SecondModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondModel.swift; sourceTree = "<group>"; };
 		2230C9DD2C38109E00A075B4 /* SecondPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPresenter.swift; sourceTree = "<group>"; };
+		2230C9E12C38186800A075B4 /* FirstPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPresenter.swift; sourceTree = "<group>"; };
 		22F4F8F02C35B40100238797 /* SENLA_Homework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SENLA_Homework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F4F8F32C35B40100238797 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		22F4F8F52C35B40100238797 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				22F842192C3713EF00925538 /* FirstViewController.swift */,
 				22F8421D2C37347E00925538 /* FirstModel.swift */,
 				22F842212C3753A000925538 /* NavigationView.swift */,
+				2230C9E12C38186800A075B4 /* FirstPresenter.swift */,
 			);
 			path = FirstScene;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				22F8420C2C37046500925538 /* AppCoordinator.swift in Sources */,
 				2230C9DE2C38109E00A075B4 /* SecondPresenter.swift in Sources */,
 				22F842102C3707F300925538 /* SecondCoordinator.swift in Sources */,
+				2230C9E22C38186800A075B4 /* FirstPresenter.swift in Sources */,
 				22F8421E2C37347E00925538 /* FirstModel.swift in Sources */,
 				22F4F8F42C35B40100238797 /* AppDelegate.swift in Sources */,
 				22F4F8F62C35B40100238797 /* SceneDelegate.swift in Sources */,
