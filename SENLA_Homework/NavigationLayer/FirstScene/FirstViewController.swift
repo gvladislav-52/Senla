@@ -10,7 +10,6 @@ import UIKit
 class FirstViewController: UIViewController {
 
     // MARK: - UI Elements
-    private var customNavigationBar: CustomNavigationBar
     private var isRevansh: Bool = true
     private var labelWinner: UILabel!
     private var labelOpenent: UILabel!
@@ -20,7 +19,7 @@ class FirstViewController: UIViewController {
     private var imageViewScissors: UIImageView
     private var button = UIButton(type: .infoDark)
     private var presenter: FirstPresenter!
-
+    
     // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,20 +28,6 @@ class FirstViewController: UIViewController {
         setupLayout()
     }
     
-    private func setupCustomNavigationBar() {
-        view.addSubview(customNavigationBar)
-        customNavigationBar.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            customNavigationBar.topAnchor.constraint(equalTo: view.topAnchor),
-            customNavigationBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            customNavigationBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            customNavigationBar.heightAnchor.constraint(equalToConstant: 80)
-        ])
-        
-        customNavigationBar.setLeftButtonAction(target: self, action: #selector(leftButtonTapped))
-        customNavigationBar.setRightButtonAction(target: self, action: #selector(rightButtonTapped))
-    }
     
     @objc private func leftButtonTapped() {
         // Действие для левой кнопки
@@ -57,7 +42,7 @@ class FirstViewController: UIViewController {
     // MARK: - Initializer
         init() {
             // Initialize UI elements\
-            customNavigationBar = CustomNavigationBar()
+            //customNavigationBar = CustomNavigationBar()
             labelWinner = UILabel()
             labelOpenent = UILabel()
             label = UILabel()
@@ -81,7 +66,14 @@ class FirstViewController: UIViewController {
         setupButton()
         setupTitleWinner()
         setupTitleOponent()
-        setupCustomNavigationBar()
+        
+    }
+    func facebookPress() {
+        print("facebook")
+    }
+    
+    func googlePlusPress() {
+        print("google-plus")
     }
 
     private func setupTitle() {
@@ -225,9 +217,9 @@ class FirstViewController: UIViewController {
     // MARK: - Button Action
     @objc private func buttonTapped() {
         if isRevansh {
-            guard let _ = presenter.model?.statusYour else {return}
-            labelOpenent.text = presenter.model?.statusOponentString
-            labelWinner.text = presenter.model?.winnerMethod()
+            guard let _ =  FirstModel.shared.statusYour else {return}
+            labelOpenent.text =  FirstModel.shared.statusOponentString
+            labelWinner.text =  FirstModel.shared.winnerMethod()
             button.setTitle("Давай реванш?", for: .normal)
             button.backgroundColor = .green
             isRevansh = false

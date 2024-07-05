@@ -1,11 +1,4 @@
-//
-//  FirstModel.swift
-//  SENLA_Homework
-//
-//  Created by macbookbro on 04.07.2024.
-//
-
-import UIKit
+import Foundation
 
 enum FirstModelType {
     case rock
@@ -13,12 +6,26 @@ enum FirstModelType {
     case scissir
 }
 
-struct FirstModel {
+class FirstModel {
+    static var shared = FirstModel()
+    var statusOponentArray: [FirstModelType] = []
+    var statusYourArray: [FirstModelType] = []
     
-     var statusOponent: FirstModelType!
-     var statusYour: FirstModelType!
+    var statusOponent: FirstModelType!
+    var statusYour: FirstModelType!
+    static var count: Int = 0 {
+        didSet {
+            NotificationCenter.default.post(name: .modelCountDidChange, object: nil)
+        }
+    }
+    func statusOponentArray(at index: Int) -> FirstModelType {
+        return statusOponentArray[index]
+    }
+    func statusYourArray(at index: Int) -> FirstModelType {
+        return statusYourArray[index]
+    }
     
-     var statusOponentString: String! {
+    var statusOponentString: String! {
         switch statusOponent {
         case .rock:
             return "Был Камень"
@@ -30,14 +37,15 @@ struct FirstModel {
             return nil
         }
     }
+    
     init() {
         statusOponent = nil
         statusYour = nil
     }
     
-    mutating func start(number: Int) {
-        var array:[Int] = [1,2,3]
-        array = array.filter {$0 != number}
+    func start(number: Int) {
+        var array: [Int] = [1, 2, 3]
+        array = array.filter { $0 != number }
         let index = Int.random(in: 0..<array.count)
         switch array[index] {
         case 1:
@@ -52,6 +60,9 @@ struct FirstModel {
     }
     
     func winnerMethod() -> String {
+        statusOponentArray.append(statusOponent)
+        statusYourArray.append(statusYour)
+        FirstModel.count += 1
         if(statusOponent == .rock && statusYour == .paper) {
             return "Your Winner!"
         } else if (statusOponent == .rock && statusYour == .scissir) {
@@ -98,4 +109,8 @@ struct FirstModel {
             return ""
         }
     }
+}
+
+extension Notification.Name {
+    static let modelCountDidChange = Notification.Name("modelCountDidChange")
 }
