@@ -1,23 +1,26 @@
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, CalculatorView {
     
     private let buttonStackView = UIStackView()
     private let displayLabel = UILabel()
-    private var currentInput: String = ""
-    private var previousInput: String = ""
-    private var operation: String = ""
-    private var hasCalculatedResult = false // New state variable
+    private let buttons = [
+        ["7", "8", "9", "+"],
+        ["4", "5", "6", "-"],
+        ["1", "2", "3", "*"],
+        ["0", "C", "=", "/"]
+    ]
+    private var presenter: CalculatorPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        view.backgroundColor = .white
+        presenter = CalculatorPresenter(view: self, model: CalculatorModel())
+        setupLabel()
+        setupButtonStack()
     }
     
-    private func setupUI() {
-        view.backgroundColor = .white
-        
-        // Setup display label
+    private func setupLabel() {
         displayLabel.textAlignment = .right
         displayLabel.font = UIFont.systemFont(ofSize: 32)
         displayLabel.text = "0"
@@ -31,14 +34,9 @@ class SecondViewController: UIViewController {
             displayLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             displayLabel.heightAnchor.constraint(equalToConstant: 100)
         ])
-        
-        // Setup buttons
-        let buttons = [
-            ["7", "8", "9", "+"],
-            ["4", "5", "6", "-"],
-            ["1", "2", "3", "x"],
-            ["0", "C", "=", "/"]
-        ]
+    }
+    
+    private func setupButtonStack() {
         
         buttonStackView.axis = .vertical
         buttonStackView.distribution = .fillEqually
@@ -78,100 +76,19 @@ class SecondViewController: UIViewController {
         
         switch buttonTitle {
         case "0"..."9":
-            handleNumberInput(buttonTitle)
-        case "+", "-", "x", "/":
-            handleOperation(buttonTitle)
+            presenter.didTapNumber(buttonTitle)
+        case "+", "-", "*", "/":
+            presenter.didTapOperation(buttonTitle)
         case "=":
-            calculateResult()
+            presenter.didTapEqual()
         case "C":
-            clear()
+            presenter.didTapClear()
         default:
             break
         }
     }
     
-    private func handleNumberInput(_ number: String) {
-        if hasCalculatedResult {
-            // Clear current input if a result was already calculated
-            currentInput = number
-            hasCalculatedResult = false
-        } else {
-            if currentInput == "" && number == "0" {
-                return // Prevent leading zeros
-            }
-            currentInput += number
-        }
-        updateDisplay()
+    func updateDisplay(_ text: String) {
+        displayLabel.text = text
     }
-    
-    private func handleOperation(_ op: String) {
-        if !currentInput.isEmpty {
-            if hasCalculatedResult {
-                hasCalculatedResult = false
-            }
-            if !previousInput.isEmpty {
-                            calculateResult()
-                        }
-                        previousInput = currentInput
-                        currentInput = ""
-                        operation = op
-                        updateDisplay()
-                    }
-                }
-                
-                private func calculateResult() {
-                    guard !previousInput.isEmpty, !currentInput.isEmpty, !operation.isEmpty else { return }
-                    
-                    let prevValue = Double(previousInput) ?? 0
-                    let currentValue = Double(currentInput) ?? 0
-                    var result: Double = 0
-                    
-                    switch operation {
-                    case "+":
-                        result = prevValue + currentValue
-                    case "-":
-                        result = prevValue - currentValue
-                    case "x":
-                        result = prevValue * currentValue
-                    case "/":
-                        if currentValue != 0 {
-                            result = prevValue / currentValue
-                        } else {
-                            displayError()
-                            return
-                        }
-                    default:
-                        break
-                    }
-                    
-                    currentInput = String(Int(result))
-                    previousInput = ""
-                    operation = ""
-                    hasCalculatedResult = true
-                    updateDisplay()
-                }
-                
-                private func clear() {
-                    currentInput = ""
-                    previousInput = ""
-                    operation = ""
-                    displayLabel.text = "0"
-                    hasCalculatedResult = false
-                }
-                
-                private func updateDisplay() {
-                    if previousInput.isEmpty {
-                        displayLabel.text = currentInput
-                    } else {
-                        displayLabel.text = "\(previousInput) \(operation) \(currentInput)"
-                    }
-                }
-                
-                private func displayError() {
-                    displayLabel.text = "Error"
-                    currentInput = ""
-                    previousInput = ""
-                    operation = ""
-                    hasCalculatedResult = false
-                }
-            }
+}
