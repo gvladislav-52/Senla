@@ -11,7 +11,7 @@ class CustomNavigationBar: UIView {
         leftButton = UIButton(type: .system)
         rightButton = UIButton(type: .system)
         
-        super.init(frame: frame)
+        super.init(frame: frame)  
         
         setupView()
         setupConstraints()

@@ -7,9 +7,10 @@
 
 import UIKit
 
-class FirstController: UIViewController {
+class FirstViewController: UIViewController {
 
     // MARK: - UI Elements
+    private var customNavigationBar: CustomNavigationBar
     private var isRevansh: Bool = true
     private var labelWinner: UILabel!
     private var labelOpenent: UILabel!
@@ -24,17 +25,12 @@ class FirstController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .gray
         setupLayout()
-        setupCustomNavigationBar()
     }
     
     private func setupCustomNavigationBar() {
-        let customNavigationBar = CustomNavigationBar()
-        
-        // Добавляем customNavigationBar как сабвью
         view.addSubview(customNavigationBar)
         customNavigationBar.translatesAutoresizingMaskIntoConstraints = false
         
-        // Устанавливаем ограничения для customNavigationBar
         NSLayoutConstraint.activate([
             customNavigationBar.topAnchor.constraint(equalTo: view.topAnchor),
             customNavigationBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -42,7 +38,6 @@ class FirstController: UIViewController {
             customNavigationBar.heightAnchor.constraint(equalToConstant: 80)
         ])
         
-        // Устанавливаем действия для кнопок
         customNavigationBar.setLeftButtonAction(target: self, action: #selector(leftButtonTapped))
         customNavigationBar.setRightButtonAction(target: self, action: #selector(rightButtonTapped))
     }
@@ -59,7 +54,8 @@ class FirstController: UIViewController {
     
     // MARK: - Initializer
         init() {
-            // Initialize UI elements
+            // Initialize UI elements\
+            customNavigationBar = CustomNavigationBar()
             labelWinner = UILabel()
             labelOpenent = UILabel()
             label = UILabel()
@@ -83,6 +79,7 @@ class FirstController: UIViewController {
         setupButton()
         setupTitleWinner()
         setupTitleOponent()
+        setupCustomNavigationBar()
     }
 
     private func setupTitle() {

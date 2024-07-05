@@ -9,7 +9,7 @@ import UIKit
 
 class FirstCoordinator: Coordinator {
     override func start() {
-        let vc = FirstController()
+        let vc = FirstViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     

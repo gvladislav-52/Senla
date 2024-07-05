@@ -9,8 +9,7 @@ import UIKit
 
 class SecondCoordinator: Coordinator {
     override func start() {
-        let vc = SecondController()
-        vc.view.backgroundColor = .red
+        let vc = SecondViewController()
         navigationController?.pushViewController(vc, animated: true)
     }
     
